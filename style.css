@@ -70,10 +70,51 @@ header {
 .navbar a:hover {
     color: var(--main-color);
 }
+/* HAMBURGER MENU */
+.hamburger {
+    cursor: pointer;
+    /* width: 24px; */
+    /* height: 24px; */
+    transition: all 0.25s;
+    display: none;
+    position: relative;
+}
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background-color: #000;
+    transform: rotate(0);
+    transition: all 0.5s;
+}
+.hamburger-middle {
+    transform: translateY(7px);
+}
+.hamburger-bottom {
+    transform: translateY(14px);
+}
+.open {
+    transform: rotate(90deg);
+    transform: translateY(0px);
+}
+ .open .hamburger-top {
+    transform: rotate(45deg) translateY(6px) translate(6px);
+ }
+ .open .hamburger-middle {
+    display: none;
+ }
+ .open .hamburger-bottom {
+    transform: rotate(-45deg) translateY(6px) translate(-6px);
+ }
+/* HAMBURGER MENU END*/
+/* HOME PAGE */
 .load{
     animation: slide 2s;
 }
-/* HOME PAGE */
 .home {
     padding: 50px 0px;
 }
@@ -83,14 +124,14 @@ header {
     background-position: center;
     width: 100%;
     height: 100vh;
-    animation: slide 20s infinite;
+    animation: slide 20s linear infinite;
 }
 .content {
     position: relative;
     color: var(--whit-color);
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 .principal {
     position: absolute;
@@ -156,6 +197,9 @@ header {
 /* ABOUT PAGE */
     .about {
         background-color: var(--bg-color);
+    }
+    .flex-inner {
+        text-align: center;
     }
     .flex-item img {
         border: 7px solid var(--main-color);
@@ -236,6 +280,7 @@ header {
 .contact {
     position: relative;
     background: url('./img/IMG-20230309-WA0188.jpg');
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -281,6 +326,9 @@ textarea {
     resize: none;
     padding: 8px 15px;
     width: 200%;
+    outline: none;
+    background-color: var(--whit-color);
+    
 }
 form .send {
     color:var(--whit-color) ;
@@ -301,12 +349,19 @@ form .send:hover {
 }
 .contact-link {
     margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
 }
 .contact-link address {
     color: var(--whit-color);
 }
 .contact-link a {
     color: var(--whit-color);
+}
+.contact-link i {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: var(--main-color);
 }
 /* CONTACT PAGE ENDS */
 
@@ -331,4 +386,64 @@ form .send:hover {
     font-size: 1rem;
     color: var(--other-color);
 }
+.social_handles a i {
+    color: var(--main-color);
+    padding: 0px 5px;
+    font-size: 20px;
+}
 /* FOOTER PAGE ENDS */
+
+@media (max-width: 680px) {
+    section {
+        padding: 50px 5%;
+    }
+    .navbar {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+    .principal h1 {
+        font-size: 50px;
+    }
+    .principal p {
+        font-size: 20px;
+    }
+    .flex-item {
+        display: flex;
+        flex-direction: column;
+    }
+    .about-text p {
+        text-align: center;
+    }
+    .contact-inner h2 {
+        font-size: 1.5rem;
+    }
+    .contact-form {
+        margin-top: 2rem;
+    }
+    .form-control input, textarea {
+        width: 100%;
+    }
+    form .send {
+        width: 100%;
+    }
+    .contact-link {
+        margin-bottom: 1rem;
+        flex-direction: row;
+    }
+    .contact-link i {
+        margin-right: 10px;
+        margin-left: 20px;
+    }
+    .contact_container {
+        margin-top: 5px;
+    }
+    .footer-nav {
+        display: block;
+        display: flex;
+        font-size: 20px;
+        flex-direction: row;
+    }
+    
+}

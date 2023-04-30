@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,6 +22,12 @@
             <li><a href="#service">Service</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <!-- HMBURGER -->
+        <button id="menu-btn" class="hamburger">
+            <span class="hamburger-top"></span>
+            <span class="hamburger-middle"></span>
+            <span class="hamburger-bottom"></span>
+        </button>
     </header>
     <!-- HOME PAGE -->
     <section class="home" id="home">
@@ -30,7 +37,7 @@
                 <div class="principal">
                     <h1>Thesource Naturals</h1>
                     <p>find the good life with good health</p>
-                    <a href="#" class="link">contact us</a>
+                    <a href="#about" class="link">Learn more</a>
                 </div>
             </div>
         </div>
@@ -127,14 +134,17 @@
             </form>
             <div class="contact_container">
                 <div class="contact-link">
+                    <i class="fa-solid fa-location-dot"></i>
                     <address>Osogbo, Osun State, Nigeria</address>
                     <address>Lagos, Nigeria</address>
                 </div>
                 <div class="contact-link">
-                    <a href="tel:+234">09135344574</a>
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="tel:+2349135344574">09135344574</a>
                 </div>
                 <div class="contact-link">
-                    <a href="mailTo:">thesourcenaturals@gmail.com</a>
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="mailTo:thesourcenaturals@gmail.com">thesourcenaturals@gmail.com</a>
                 </div>
             </div>
         </div>
@@ -143,17 +153,17 @@
     <!-- FOOTER -->
     <section class="footer">
         <div class="footer-inner flex-item">
-            <a href="#" class="logo"><h1>THESOURCE <span class="green">NATURAL</span></h1></a>
-            <ul class="navbar">
+            <a href="#" class="logo bg-green"><h1>THESOURCE <span class="green">NATURALS</span></h1></a>
+            <ul class="navbar footer-nav">
                 <li><a href="#">Home</a></li>
                 <li><a href="#about">Privacy</a></li>
                 <li><a href="#service">Terms</a></li>
                 <li><a href="#contact">Support</a></li>
             </ul>
             <div class="social_handles">
-                <a href="#">whatsapp</a>
-                <a href="#">instagram</a>
-                <a href="#">facebook</a>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
             </div>
         </div>
         <div class="line"></div>
