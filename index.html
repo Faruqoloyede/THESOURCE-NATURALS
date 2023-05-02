@@ -10,13 +10,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- NAVBAR -->
     <header>
         <a href="#" class="logo"><h1>THESOURCE <span class="green">NATURALS</span></h1></a>
-        <ul class="navbar">
+        <ul class="navbar" id="nav_bar">
             <li><a href="#">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#service">Service</a></li>
@@ -98,25 +99,18 @@
             </div>
         </div>
     </section>
-    <!-- TESTIMONIAL SECTION -->
-    <!-- <section class="testimonial">
-        <h1>TESTIMONIALS</h1>
-        <div class="testimonial-inner">
-
-        </div>
-    </section> -->
     <!-- CONTACT PAGE -->
     <section class="contact" id="contact">
        <div class="contact-inner">
         <h2>make an appointment</h2>
         <p>We will send you a confirmation within 24 hours.</p>
         <div class="flex-item contact-form">
-            <form>
+            <form action="https://formsubmit.co/thesourcenaturals@gmail.com" method="POST">
                 <div class="form-control">
                     <input type="text" name="name" placeholder="Enter full Name" required>
                 </div>
                 <div class="form-control">
-                    <input type="email" name="email" placeholder="Enter Email" required>
+                    <input type="email" name="email" id="email" placeholder="Enter Email" required>
                 </div>
                 <div class="form-control">
                     <input type="tel" name="tel" placeholder="Enter your phone number (+code)" required>
@@ -154,7 +148,7 @@
     <section class="footer">
         <div class="footer-inner flex-item">
             <a href="#" class="logo bg-green"><h1>THESOURCE <span class="green">NATURALS</span></h1></a>
-            <ul class="navbar footer-nav">
+            <ul class="footer-nav">
                 <li><a href="#">Home</a></li>
                 <li><a href="#about">Privacy</a></li>
                 <li><a href="#service">Terms</a></li>
@@ -162,12 +156,14 @@
             </ul>
             <div class="social_handles">
                 <a href="https://api.whatsapp.com/send/?phone=%2B2349135344574&text&type=phone_number&app_absent=0"><i class="fa-brands fa-whatsapp"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://instagram.com/thesourcenaturals?igshid=ZDKNTZiNTM="><i class="fa-brands fa-instagram"></i></a>
                 <a href="https://web.facebook.com/thesourceholistichealthcare"><i class="fa-brands fa-facebook"></i></a>
             </div>
         </div>
         <div class="line"></div>
         <p class="footer-text">&copy;2023 thesourcenaturals, All right Reserved</p>
     </section>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>

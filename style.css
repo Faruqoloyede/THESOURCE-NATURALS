@@ -73,11 +73,10 @@ header {
 /* HAMBURGER MENU */
 .hamburger {
     cursor: pointer;
-    /* width: 24px; */
-    /* height: 24px; */
     transition: all 0.25s;
     display: none;
     position: relative;
+    margin-right: 10px;
 }
 .hamburger-top,
 .hamburger-middle,
@@ -391,6 +390,17 @@ form .send:hover {
     padding: 0px 5px;
     font-size: 20px;
 }
+.footer-nav {
+    display: flex;
+    align-items: center;
+}
+.footer-nav a {
+    padding: 10px 20px;
+    font-size: 12px;
+    font-weight: 200;
+    color: var(--bigfont-color);
+    transition: all .35s ease;
+}
 /* FOOTER PAGE ENDS */
 
 @media (max-width: 680px) {
@@ -398,7 +408,27 @@ form .send:hover {
         padding: 50px 5%;
     }
     .navbar {
+        position: absolute;
         display: none;
+        top: 100%;
+        right: 0;
+        flex-direction: column;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 30px;
+        background-color: var(--bg-color);
+        transition: all 35s ease-in-out;
+    }
+    .navbar a {
+        display: block;
+        color: var(--bigfont-color);
+        padding: 0.8rem;
+        margin-top: 20px;
+        font-size: 20px;
+    }
+    .navbar.show {
+        display: block;
     }
     .hamburger {
         display: block;
