@@ -10,7 +10,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -99,32 +98,46 @@
             </div>
         </div>
     </section>
+    <!-- TESTIMONIAL SECTION -->
+    <section id="testimonial">
+        <h3>Review</h3>
+        <h2>CLIENT TESTIMONIALS</h2>
+        <div class="testimonial-container">
+            <div class="progress-bar"></div>
+            <div class="fas fa-quote-right fa-quote"></div>
+            <div class="fas fa-quote-left fa-quote"></div>
+            <p class="testimonial">
+                Thanks to the treatment I received, my pain has been significantly reduced, and I am now able to lead a much more active and fulfilling life. I no longer feel limited by my condition and am able to enjoy activities that were once impossible for me.
+            </p>
+            <cite class="user">_happy client</cite>
+          </div>
+    </section>
     <!-- CONTACT PAGE -->
     <section class="contact" id="contact">
        <div class="contact-inner">
         <h2>make an appointment</h2>
         <p>We will send you a confirmation within 24 hours.</p>
         <div class="flex-item contact-form">
-            <form action="https://formsubmit.co/thesourcenaturals@gmail.com" method="POST">
+            <form>
                 <div class="form-control">
-                    <input type="text" name="name" placeholder="Enter full Name" required>
+                    <input type="text" name="name" placeholder="Enter full Name" required id="name">
                 </div>
                 <div class="form-control">
                     <input type="email" name="email" id="email" placeholder="Enter Email" required>
                 </div>
                 <div class="form-control">
-                    <input type="tel" name="tel" placeholder="Enter your phone number (+code)" required>
+                    <input type="tel" name="tel" placeholder="Enter your phone number (+code)" required id="number">
                 </div>
                 <div class="form-control">
-                    <input type="date" name="date"required>
+                    <input type="date" name="date"required id="date">
                 </div>
                 <div class="form-control">
-                    <input type="time" required>
+                    <input type="time" required id="time">
                 </div>
                 <div class="form-control">
                     <textarea name="message" id="message"></textarea>
                 </div>
-                <input type="submit" value="send" class="send">
+                <input type="submit" value="send" class="send" onclick="sendEmail()">
             </form>
             <div class="contact_container">
                 <div class="contact-link">
@@ -163,7 +176,7 @@
         <div class="line"></div>
         <p class="footer-text">&copy;2023 thesourcenaturals, All right Reserved</p>
     </section>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="app.js"></script>
+
 </body>
 </html>
